@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+
+$sej-color-dark: #003060;
+$sej-color-primary: #275685;
+$sej-color-accent: rgb(39 86 133 / 60%);
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+.mat-drawer-container {
+  height: 100%;
+  padding-left: 50px;
+}
+.mat-sidenav-container {
+  width: 400px;
+  padding-left: 50px;
+}
+.main-nav-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  z-index: 2;
+  color: #fff;
+  background: $sej-color-dark;
+}
+.nav-btn-item {
+  width: 50px;
+  padding: 5px;
+
+  cursor: pointer;
+}
+.nav-btn-item:hover {
+  background: $sej-color-primary;
+  transition: all 1s ease;
+}
+.nav-btn-item-active {
+  background: $sej-color-primary;
+}
+.border-1-bottom {
+  border-top-color: rgba(201, 76, 76, 0.3);
+}
+.border-1-top {
+  border-top-color: rgba(201, 76, 76, 0.3);
+}
