@@ -1,0 +1,9 @@
+<mat-selection-list #shoes [multiple]="false">
+  <mat-list-option
+    *ngFor="let aoi of aoiList"
+    [value]="aoi.id"
+    (click)="navigateToObjectList(aoi.id)"
+  >
+    {{ aoi.name }}
+  </mat-list-option>
+</mat-selection-list>

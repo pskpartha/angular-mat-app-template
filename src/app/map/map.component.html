@@ -1,15 +1,27 @@
 <mat-drawer-container class="mat-drawer-container" autosize>
   <mat-drawer #drawer class="mat-sidenav-container" opened="true" mode="side">
-    <p>Auto-resizing sidenav</p>
-    <div class="px-2 py-3">
-      <app-object-list></app-object-list>
+    <div class="">
+      <h1>AOI</h1>
+      <div class="px-2 py-3">
+        <app-object-list *ngIf="showObList"></app-object-list>
+        <app-aoi-list *ngIf="!showObList"></app-aoi-list>
+      </div>
     </div>
   </mat-drawer>
 
   <div class="example-sidenav-content">
-    <button type="button" mat-button (click)="drawer.toggle()">
-      Toggle sidenav
-    </button>
+    <div class="drawer-menu-button-container">
+      <button
+        type="button"
+        mat-button
+        (click)="drawer.toggle()"
+        mat-mini-fab
+        color="primary"
+        aria-label="Example icon button with a menu icon"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
 
     <p>
       <span matBadge="4" matBadgeOverlap="false">Text with a badge</span>
