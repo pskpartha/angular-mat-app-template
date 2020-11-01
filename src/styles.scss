@@ -40,12 +40,21 @@ body {
   background: $sej-color-primary;
   transition: all 1s ease;
 }
+.nav-btn-item.active {
+  background: $sej-color-primary;
+  transition: all 1s ease;
+}
+
+.nav-btn-item.active::after {
+  position: absolute;
+  margin-left: 5px;
+  color: $sej-color-primary;
+}
 .nav-btn-item-active {
   background: $sej-color-primary;
 }
-.border-1-bottom {
-  border-top-color: rgba(201, 76, 76, 0.3);
-}
-.border-1-top {
-  border-top-color: rgba(201, 76, 76, 0.3);
+.drawer-menu-button-container {
+  position: absolute;
+  margin-left: 5px;
+  bottom: 5px;
 }
