@@ -18,6 +18,12 @@ export class ApiService {
       .pipe(catchError(this.handleError));
   }
 
+  public getAmplitudePlot() {
+    return this.httpClient
+      .get('http://sejapp1.datel.ee/api/grd/objects/5/amplitudePlot')
+      .pipe(catchError(this.handleError));
+  }
+
   handleError(error: HttpErrorResponse) {
     let errorMessage = 'Unknown error!';
     if (error.error instanceof ErrorEvent) {

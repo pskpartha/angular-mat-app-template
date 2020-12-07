@@ -1,0 +1,46 @@
+<h2 mat-dialog-title>Chart Demo</h2>
+<mat-dialog-content class="mat-typography">
+  <!-- <div class="container-fluid">-->
+  <div class="row">
+    <div class="col-md-4">
+      <div class="settings-threshold">
+        <mat-card class="example-result-card">
+          <mat-card-content>
+            <h2>Result : {{ cvalue }}</h2>
+
+            <mat-slider
+              class="example-margin"
+              [max]="max"
+              [min]="min"
+              value="-1"
+              (change)="getCurrentValue($event.value, '1')"
+            >
+            </mat-slider>
+          </mat-card-content>
+          <mat-card-content>
+            <h2>Result : {{ cvalue }}</h2>
+
+            <mat-slider
+              class="example-margin"
+              [max]="max"
+              [min]="min"
+              value="1"
+              (change)="getCurrentValue($event.value, '2')"
+            >
+            </mat-slider>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div *ngIf="cdata?.chartData?.datasets.length" class="px-2">
+        <canvas id="myChart" width="600" height="400"></canvas>
+      </div>
+    </div>
+    <!-- </div> -->
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button>
+</mat-dialog-actions>
